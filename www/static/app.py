@@ -1,4 +1,11 @@
 # coding=utf-8
+
+__author__ = 'wuxiaoqi'
+
+'''
+async web application
+'''
+
 import logging
 import asyncio, os, json, time
 from datetime import datetime
@@ -8,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 def index(request):
-    return web.Response(body=b'<h1>Awesome</h1>')
+    return web.Response(body=b'<h1>Awesome</h1>', headers={'content-type': 'text/html'})
 
 
 async def init(loop):
